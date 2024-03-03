@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface Calculate {
 
-    public Integer calculateCalorie();
+    public List<EatingDTO> calculateCalorie();
 }

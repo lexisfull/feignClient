@@ -15,11 +15,11 @@ public class CalculateCalorieImpl implements Calculate{
     private final EatingFeignClient eatingFeignClient;
 
     @Override
-    public Integer calculateCalorie() {
+    public List<EatingDTO> calculateCalorie() {
 
-        var eating = eatingFeignClient.getEatingPersonId(1L);
+        List<EatingDTO> eating = eatingFeignClient.getEatingPersonId(1L).getBody();
 
         System.out.println(eating);
-        return null;
+        return eating;
     }
 }
